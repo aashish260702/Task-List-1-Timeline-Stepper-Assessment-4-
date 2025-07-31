@@ -1,0 +1,107 @@
+.timelineStepper {
+  display: flex;
+  flex-direction: column;
+  margin: 32px auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 36px 28px;
+  min-width: 320px;
+  max-width: 450px;
+  box-shadow: 0 6px 32px 8px #e4f1ff40;
+}
+
+.timelineStepRow {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  min-height: 60px;
+  user-select: none;
+  transition: background-color 0.2s;
+}
+
+.timelineStepRow:hover {
+  background-color: #f5f9ff;
+}
+
+.circleCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 38px;
+  min-width: 38px;
+  position: relative;
+}
+
+/* Icon styles */
+.iconCompleted {
+  color: #4caf50;
+  font-size: 22px;
+  margin-top: 2px;
+  z-index: 1;
+}
+
+.iconCurrent {
+  color: #1976d2;
+  font-size: 22px;
+  margin-top: 2px;
+  z-index: 1;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.iconPending {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #d6dbdf;
+  background: #f3f5f8;
+  margin-top: 2px;
+  z-index: 1;
+}
+
+.verticalBar {
+  width: 3px;
+  flex-grow: 1;
+  background: #d6dbdf;
+  margin: 2px 0 0 0;
+  min-height: 34px;
+  z-index: 0;
+  border-radius: 2px;
+}
+
+.barActive {
+  background: linear-gradient(to bottom, #1976d2 66%, #d6dbdf 34%);
+}
+
+.stepContent {
+  padding-left: 16px;
+  flex: 1;
+  min-height: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.stepTitle {
+  font-weight: 600;
+  font-size: 1.13rem;
+  color: #107020;
+  margin-bottom: 2px;
+  letter-spacing: 0.02em;
+}
+
+.stepDesc {
+  font-size: 0.99rem;
+  color: #727e90;
+  margin-bottom: 2px;
+}
+
+.progressText {
+  font-size: 0.92rem;
+  color: #1976d2;
+  margin-top: 2px;
+}
